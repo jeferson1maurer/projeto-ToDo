@@ -10,7 +10,7 @@ Vite
 
 JavaScript (ES6+)
 
-CSS / Tailwind CSS (ou outra lib, ajuste se necessário)
+CSS / Tailwind CSS
 
 LocalStorage API
 
