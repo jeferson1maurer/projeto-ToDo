@@ -1,73 +1,76 @@
-# React + TypeScript + Vite
+⚛️ Projeto React com Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto foi desenvolvido com React utilizando o Vite como ferramenta de build, com foco em boas práticas de componentização, gerenciamento de estado, experiência do usuário e simulação de fluxos reais de aplicações frontend modernas.
 
-Currently, two official plugins are available:
+🚀 Tecnologias Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+React
 
-## React Compiler
+Vite
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+JavaScript (ES6+)
 
-## Expanding the ESLint configuration
+CSS / Tailwind CSS (ou outra lib, ajuste se necessário)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+LocalStorage API
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+📌 Funcionalidades Principais
+🧩 Componentização
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Estrutura baseada em componentes reutilizáveis
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Separação clara de responsabilidades (UI, lógica e estado)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Componentes com props e variantes para maior flexibilidade
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+🎨 Estilização e Variantes
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Estilização modular e escalável
+
+Uso de variantes de componentes (ex: tamanhos, estados visuais, tipos)
+
+Facilita manutenção e reaproveitamento de UI
+
+🔁 Estados do React
+
+Uso de useState e useEffect
+
+Controle de estados globais e locais
+
+Atualização reativa da interface conforme ações do usuário
+
+💾 Persistência com LocalStorage
+
+Armazenamento de dados no navegador
+
+Persistência de informações mesmo após recarregar a página
+
+Sincronização entre estado do React e LocalStorage
+
+⏳ Loading States (UX)
+
+Simulação de requisições assíncronas para representar cenários reais de consumo de API:
+
+Skeleton Loading:
+Exibido enquanto os dados estão sendo carregados, melhorando a percepção de desempenho.
+
+Spinner / Loader:
+Feedback visual durante ações assíncronas.
+
+🔄 Simulação de Requisições Assíncronas
+
+Uso de setTimeout para simular chamadas de API
+
+Objetivo do Projeto
+
+Este projeto tem como objetivo demonstrar:
+
+Domínio dos fundamentos do React
+
+Capacidade de criar interfaces escaláveis
+
+Preocupação com experiência do usuário
+
+Boas práticas de organização e legibilidade de código
+
+Simulação de cenários comuns do dia a dia no frontend
